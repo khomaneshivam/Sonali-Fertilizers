@@ -58,8 +58,8 @@ export default function Hero({ lang, onOpenInquiry }) {
             {/* Sub-headline */}
             <p className="hero-subheading">
               {lang === 'mr' 
-                ? 'इंदापूर, संसार आणि कुरावली परिसरातील शेतकऱ्यांसाठी १००% अस्सल इफको, जीएसएफसी, महाधन खते आणि थेट बांधावर घरपोच डिलिव्हरी.' 
-                : 'Serving farmers in Sansar, Kurawali, Indapur & Baramati with authentic IFFCO, GSFC, Mahadhan fertilizers, certified hybrid seeds, and doorstep farm delivery.'}
+                ? 'इंदापूर, संसार आणि कुरावली परिसरातील शेतकऱ्यांसाठी १००% अस्सल इफको, जीएसएफसी, महाधन खते, जयराज ठिबक सिंचन साहित्य आणि थेट बांधावर घरपोच डिलिव्हरी.' 
+                : 'Serving farmers in Sansar, Kurawali, Indapur & Baramati with authentic IFFCO, GSFC, Mahadhan fertilizers, Jayraj drip irrigation systems, hybrid seeds, and doorstep farm delivery.'}
             </p>
 
             {/* Key benefits list */}
@@ -118,19 +118,23 @@ export default function Hero({ lang, onOpenInquiry }) {
           {/* Right Column: Hero Visual Media Showcase */}
           <div className="hero-media-wrapper">
             <div className="hero-image-card">
+              <div className="hero-verified-badge">
+                <CheckCircle2 size={16} className="verified-check" />
+                <span>{lang === 'mr' ? 'अधिकृत प्रत्यक्ष दालन' : 'Verified Storefront'}</span>
+              </div>
               <img 
-                src="/assets/hero_storefront.jpg" 
-                alt="Sonali Fertilizers Storefront Sansar Indapur" 
+                src="/assets/store_real_front.jpg" 
+                alt="Sonali Fertilizers & Jayraj Irrigation Storefront Sansar Indapur" 
                 className="hero-main-img" 
                 loading="eager"
               />
               <div className="hero-img-overlay-badge">
                 <div className="overlay-badge-content">
                   <span className="overlay-store-name">
-                    {lang === 'mr' ? 'सोनाली फर्टिलायझर्स' : 'Sonali Fertilizers'}
+                    {lang === 'mr' ? 'सोनाली फर्टिलायझर्स, जयराज इरिगेशन' : 'Sonali Fertilizers & Jayraj Irrigation'}
                   </span>
                   <span className="overlay-sub-text">
-                    {lang === 'mr' ? '★ ४.२ रेटिंग • प्रमाणित कृषी केंद्र' : '★ 4.2 Rating • Certified Agro Center'}
+                    {lang === 'mr' ? '★ ४.२ रेटिंग • कृषी, खते, ठिबक व हार्डवेअर (संसार)' : '★ 4.2 Rating • Agro, Drip & Hardware Center (Sansar)'}
                   </span>
                 </div>
               </div>

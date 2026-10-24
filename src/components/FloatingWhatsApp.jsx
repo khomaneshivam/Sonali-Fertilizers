@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Phone } from 'lucide-react';
+import { MessageCircle, Phone, Calculator } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessData';
 
 export default function FloatingWhatsApp({ lang }) {
@@ -22,11 +22,11 @@ export default function FloatingWhatsApp({ lang }) {
         </a>
       </aside>
 
-      {/* Mobile Sticky Bottom Action Bar */}
+      {/* Mobile Sticky Bottom Action Bar with iOS Safe-Area support */}
       <nav className="mobile-bottom-bar" aria-label="Mobile quick actions">
         <a href={`tel:${BUSINESS_INFO.phone}`} className="bottom-bar-btn call-action">
-          <Phone size={18} />
-          <span>{lang === 'mr' ? 'कॉल करा' : 'Call Store'}</span>
+          <Phone size={17} />
+          <span>{lang === 'mr' ? 'कॉल' : 'Call'}</span>
         </a>
         <a
           href={`https://wa.me/${BUSINESS_INFO.whatsappNumber}?text=Hello%20Sonali%20Fertilizers,%20I%20want%20to%20order`}
@@ -34,8 +34,12 @@ export default function FloatingWhatsApp({ lang }) {
           rel="noopener noreferrer"
           className="bottom-bar-btn wa-action"
         >
-          <MessageCircle size={18} />
-          <span>{lang === 'mr' ? 'व्हॉट्सॲप ऑर्डर' : 'WhatsApp Order'}</span>
+          <MessageCircle size={17} />
+          <span>{lang === 'mr' ? 'व्हॉट्सॲप' : 'WhatsApp'}</span>
+        </a>
+        <a href="#calculator" className="bottom-bar-btn calc-action">
+          <Calculator size={17} />
+          <span>{lang === 'mr' ? 'खत गणक' : 'Calculator'}</span>
         </a>
       </nav>
     </>

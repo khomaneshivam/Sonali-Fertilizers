@@ -2,12 +2,14 @@
 // Derived from Google Business Profile & local agricultural market specifics (Sansar, Indapur, Pune)
 
 export const BUSINESS_INFO = {
-  name: "Sonali Fertilizers",
-  nameMr: "सोनाली फर्टिलायझर्स",
-  tagline: "Agro Service Center & Complete Crop Nutrition Solutions",
-  taglineMr: "शेतकऱ्यांचा विश्वासू कृषी सेवा केंद्र व पीक पोषण सल्लागार",
+  name: "Sonali Fertilizers & Jayraj Irrigation",
+  nameMr: "सोनाली फर्टिलायझर्स, जयराज इरिगेशन",
+  fullNameMr: "सोनाली फर्टिलायझर्स, जयराज इरिगेशन सिस्टीम & हार्डवेअर",
+  fullNameEn: "Sonali Fertilizers, Jayraj Irrigation System & Hardware",
+  tagline: "Agro Service Center, Drip Irrigation & Crop Nutrition Solutions",
+  taglineMr: "शेतकऱ्यांचा विश्वासू कृषी सेवा केंद्र, ठिबक सिंचन व पीक पोषण सल्लागार",
   address: "Sansar-Kurawali Road, Mankarwadi, Sansar, Tal. Indapur, Dist. Pune, Maharashtra 413104",
-  addressMr: "संसार-कुरा Frank-कुरावली रोड, मानकरवाडी, संसार, ता. इंदापूर, जि. पुणे, महाराष्ट्र ४१३१०४",
+  addressMr: "संसार-कुरावली रोड, मानकरवाडी, संसार, ता. इंदापूर, जि. पुणे, महाराष्ट्र ४१३१०४",
   phone: "+91 94230 34155",
   phoneSecondary: "+91 98816 54155",
   whatsappNumber: "919423034155",
@@ -368,10 +370,10 @@ export const REVIEWS = [
 
 export const GALLERY_IMAGES = [
   {
-    url: "/assets/hero_storefront.jpg",
-    titleEn: "Sonali Fertilizers Storefront & Agro Center",
-    titleMr: "सोनाली फर्टिलायझर्स दालन व कृषी सेवा केंद्र",
-    category: "Store"
+    url: "/assets/store_real_front.jpg",
+    titleEn: "Sonali Fertilizers & Jayraj Irrigation Storefront & Forecourt (Sansar)",
+    titleMr: "सोनाली फर्टिलायझर्स, जयराज इरिगेशन सिस्टीम & हार्डवेअर - मुख्य दालन व आवार",
+    category: "Real Storefront"
   },
   {
     url: "/assets/fertilizers.jpg",

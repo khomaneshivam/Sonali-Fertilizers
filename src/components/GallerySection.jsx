@@ -1,9 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Image, ZoomIn, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { GALLERY_IMAGES } from '../data/businessData';
 
 export default function GallerySection({ lang }) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+
+  useEffect(() => {
+    if (selectedImageIndex !== null) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+
+      const handleKeyDown = (e) => {
+        if (e.key === 'Escape') {
+          setSelectedImageIndex(null);
+        } else if (e.key === 'ArrowRight') {
+          setSelectedImageIndex((prev) => (prev + 1) % GALLERY_IMAGES.length);
+        } else if (e.key === 'ArrowLeft') {
+          setSelectedImageIndex((prev) => (prev - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length);
+        }
+      };
+
+      window.addEventListener('keydown', handleKeyDown);
+      return () => {
+        document.body.style.overflow = originalOverflow;
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    }
+  }, [selectedImageIndex]);
 
   const openLightbox = (index) => {
     setSelectedImageIndex(index);
